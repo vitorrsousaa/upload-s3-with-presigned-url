@@ -5,40 +5,87 @@ This is a basic template to kickstart projects using React.js. It provides a sim
 ## Folder Structure
 The repository has the following folder structure:
 
-public: This folder contains static files that will be publicly served by the server. This includes the index.html file, the entry point for the React application, and any other static resources such as images, fonts, or icon files.
-src: This is the main folder for the source code of the React application. It contains React components, CSS styles, JavaScript scripts, and any other files related to the application logic. Here's an overview of the structure within the src folder:
-components: This folder contains reusable React components of the application. Each component is typically in its own file for ease of maintenance and reuse.
-styles: This folder contains CSS style files for styling the application components. Styles can be organized into separate files or a single file, depending on the developer's preference.
-App.js: This is the main component of the React application. It serves as the entry point of the component hierarchy and typically renders other components of the application.
-index.js: This file is the entry point for the React application. It renders the main component (App.js) into the HTML page.
-.gitignore: This file specifies which files and folders should be ignored by Git during code versioning. It typically includes temporary files, build files, and development dependencies that should not be publicly shared.
-package.json: This file is used by npm (Node Package Manager) to manage project dependencies, build scripts, development commands, and other project-related configurations.
-```
-project
-| src
-|__view
-|__app
+- public: This folder contains static files that will be publicly served by the server. This includes the index.html file, the entry point for the React application, and any other static resources such as images, fonts, or icon files.
+- docs: This folder typically serves as a central location for documentation related to a project.
+- src: This is the main folder for the source code of the React application. It contains React components, CSS styles, JavaScript scripts, and any other files related to the application logic. Here's an overview of the structure within the src folder:
+- app
+  - config: Configuration files and settings for the application.
+  - contexts: Context providers for managing global state in React applications.
+  - hooks: Custom React hooks for reusable logic across components.
+  - libs: Utility libraries or functions used throughout the application.
+  - services: Service modules for handling API requests or external services.
+  - storage: Modules or utilities for managing local storage or client-side storage.
+  - utils: General-purpose utility functions or helpers used across the application.
+- view:
+  - assets: Static assets such as images, fonts, or icons used in the application.
+  - components: This folder contains reusable React components of the application. Each component is typically in its own file for ease of maintenance and reuse.
+  - layouts: Layout components defining the overall structure of pages or sections.
+  - pages: React components representing individual pages/routes of the application.
+  - router: Configuration and setup for client-side routing using a router library (e.g., React Router).
+  - ui: UI components or elements specific to the application's design system.
 
-```
-asd
+
 ```
 
 ├── src
-│   ├── controller
-│   │   ├── **/*.css
-│   ├── views
-│   ├── model
-│   ├── index.js
+│   ├── app 
+│   │   ├── config
+│   │   ├── contexts
+│   │   ├── hooks
+│   │   ├── libs
+│   │   ├── services
+│   │   ├── storage
+│   │   ├── utils
+│   ├── view
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── layouts
+│   │   ├── pages
+│   │   ├── router
+│   │   ├── ui
 ├── public
-│   ├── css
-│   │   ├── **/*.css
-│   ├── images
-│   ├── js
-│   ├── index.html
+│   ├── vite.svg
 ├── dist or build
 ├── node_modules
-├── package.json
 ├── package-lock.json
+└── .gitignore
+```
+
+## File Structure
+
+The repository has the following file structure:
+
+- .commitlintrc: Configuration file for commit linting rules, ensuring consistent commit messages.
+- .env.example: Example environment variables file used as a template for defining environment configurations.
+- .gitignore: Specifies which files and directories should be ignored by Git version control.
+- biome.json: JSON file containing biome data or configuration specific to the application.
+- index.html: HTML file serving as the entry point for the application in web environments.
+- package.json: Manifest file for Node.js projects, specifying dependencies, scripts, and metadata.
+- postcss.config.js: Configuration file for PostCSS, a tool for transforming CSS with JavaScript plugins.
+- README.md: Markdown file containing documentation and information about the project.
+- tailwind.config.js: Configuration file for Tailwind CSS, a utility-first CSS framework.
+- tsconfig.json: Configuration file for TypeScript compiler, specifying compiler options and project settings.
+- tsconfig.node.json: TypeScript configuration specific to Node.js environments.
+- vite.config.ts: Configuration file for Vite, a next-generation frontend build tool.
+- vitest.config.ts: Configuration file for Vite tests.
+- yarn.lock: Lock file generated by Yarn package manager, ensuring deterministic dependency resolution.
+- .gitignore: Specifies which files and directories should be ignored by Git version control.
+
+```
+├── .commitlintrc
+├── .env.example
+├── .gitignore
+├── biome.json
+├── index.html
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── vitest.config.ts
+├── yarn.lock
 └── .gitignore
 ```
 
