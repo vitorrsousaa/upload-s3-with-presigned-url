@@ -13,12 +13,31 @@ App.js: This is the main component of the React application. It serves as the en
 index.js: This file is the entry point for the React application. It renders the main component (App.js) into the HTML page.
 .gitignore: This file specifies which files and folders should be ignored by Git during code versioning. It typically includes temporary files, build files, and development dependencies that should not be publicly shared.
 package.json: This file is used by npm (Node Package Manager) to manage project dependencies, build scripts, development commands, and other project-related configurations.
+```
+project
+| src
+|__view
+|__app
 
-- src
-  - app
-    - hooks
-  - view
-    - pages
+```
+
+├── src
+│   ├── controller
+│   │   ├── **/*.css
+│   ├── views
+│   ├── model
+│   ├── index.js
+├── public
+│   ├── css
+│   │   ├── **/*.css
+│   ├── images
+│   ├── js
+│   ├── index.html
+├── dist or build
+├── node_modules
+├── package.json
+├── package-lock.json
+└── .gitignore
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
