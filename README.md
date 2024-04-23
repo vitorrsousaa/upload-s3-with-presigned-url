@@ -2,6 +2,31 @@
 
 This is a basic template to kickstart projects using React.js. It provides a simple initial structure to help developers get started quickly with their React projects.
 
+## Technologies
+
+This template includes the following packages and technologies:
+
+- `ViteJS`: A [Vite](https://vitejs.dev/) single page app.
+- `Tanstack - React Query`: A library for fetching, caching, and updating server state in React applications. [Link](https://react-query.tanstack.com/)
+- `Tailwind CSS`: A utility-first CSS framework for rapidly building custom designs. [Link](https://tailwindcss.com/)
+- `PostCSS`: A tool for transforming CSS with JavaScript plugins. [Link](https://postcss.org/)
+- `Axios`: A promise-based HTTP client for making XMLHttpRequests in the browser and Node.js. [Link](https://axios-http.com/)
+- `React Hot Toast`: A toast notification library for React applications with hot reloading support. [Link](https://react-hot-toast.com/)
+- `React Hook Form`: A library for building flexible and composable forms with React hooks. [Link](https://react-hook-form.com/)
+- `zod`: A TypeScript-first schema declaration and validation library. [Link](https://github.com/colinhacks/zod)
+
+
+This template includes the following packages and technologies as dev dependencies:
+
+- `biome`: A tool for linting, format and check files. [Link](https://biomejs.dev/pt-br/)
+- `commitlint`: Linting tool for enforcing conventional commit messages. [Link](https://commitlint.js.org/)
+- `lint-staged`: Run linters on git staged files. [Link](https://github.com/okonet/lint-staged)
+- `vitest`: A framework-agnostic testing solution built for Vite. [Link](https://vitest.dev/)
+- `husky`: Git hooks made easy. [Link](https://typicode.github.io/husky/#/)
+
+
+This template and packages is 100% [TypeScript](https://www.typescriptlang.org/).
+
 ## Folder Structure
 The repository has the following folder structure:
 
@@ -26,7 +51,6 @@ The repository has the following folder structure:
 
 
 ```
-
 ├── src
 │   ├── app 
 │   │   ├── config
