@@ -23,8 +23,32 @@ export default {
     tsconfigRootDir: __dirname,
   },
 }
-```
+
+devDependencies:
+husky
+https://typicode.github.io/husky/get-started.html
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+Você pode formatar arquivos e diretórios usando o comando format com o parâmetro --write:
+
+
+yarn biome format --write <files>
+
+
+Você pode analisar e aplicar correções seguras em arquivos e diretórios utilizando o comando lint com o parâmetro --apply:
+
+yarn biome lint --apply <files>
+
+Você pode aplicar ambos com o comando check
+
+yarn biome check --apply <files>
+
+O comando check executa múltiplas ferramentas de uma vez. Até o momento, ele:
+
+formata arquivos
+analisa arquivos
+organiza as importações

@@ -1,14 +1,23 @@
 import path from "node:path";
-import react from "@vitejs/plugin-react-swc";
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
-	server: {
-		open: true,
-	},
-	resolve: {
+	test: {
+		environment: "happy-dom",
+		exclude: [
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/cypress/**",
+			"**/.{idea,git,cache,output,temp}/**",
+			"**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build}.config.*",
+			"**/html/**",
+			"**/coverage/**",
+		],
+		reporters: ["basic"],
+		coverage: {
+			provider: "v8",
+		},
+		globals: true,
 		alias: {
 			"@/config": path.resolve(__dirname, "./src/app/config"),
 			"@/pages": path.resolve(__dirname, "./src/view/pages"),
