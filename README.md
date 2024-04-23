@@ -21,13 +21,51 @@ This template includes the following packages and technologies as dev dependenci
 - `biome`: A tool for linting, format and check files. [Link](https://biomejs.dev/pt-br/)
 - `commitlint`: Linting tool for enforcing conventional commit messages. [Link](https://commitlint.js.org/)
 - `lint-staged`: Run linters on git staged files. [Link](https://github.com/okonet/lint-staged)
-- `vitest`: A framework-agnostic testing solution built for Vite. [Link](https://vitest.dev/)
+- `vitest`: A framework of test runner for all things JavaScript. [Link](https://vitest.dev/)
 - `husky`: Git hooks made easy. [Link](https://typicode.github.io/husky/#/)
 
 
 This template and packages is 100% [TypeScript](https://www.typescriptlang.org/).
 
-## Folder Structure
+## 🚀 How to run the project
+
+### Prerequisites
+
+Before you begin, you will need to have the following tools installed on your machine:<br />
+→ [Git](https://git-scm.com);<br />
+→ [Node.js](https://nodejs.org/en/);<br />
+
+It is also good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/);
+
+---
+
+### 🧭 Running the web application 
+
+```bash
+# Clone this repository
+$ git clone https://github.com/vitorrsousaa/WaiterApp.git
+
+# Navigate to the Frontend application folder
+$ cd client
+
+# Install the dependencies
+yarn install
+
+# Run the application
+yarn start
+# The application will open at port:5173 - visit http://localhost:5173
+```
+
+### Settings environment variables
+
+Add a `.env` file to the root folder, following the `env.example` in this repository.
+
+
+## Executing tests
+
+## Project Structure
+
+### Folder Structure
 The repository has the following folder structure:
 
 - public: This folder contains static files that will be publicly served by the server. This includes the index.html file, the entry point for the React application, and any other static resources such as images, fonts, or icon files.
@@ -75,7 +113,7 @@ The repository has the following folder structure:
 └── .gitignore
 ```
 
-## File Structure
+### File Structure
 
 The repository has the following file structure:
 
@@ -113,55 +151,61 @@ The repository has the following file structure:
 └── .gitignore
 ```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-
-devDependencies:
-husky
-https://typicode.github.io/husky/get-started.html
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 
-Você pode formatar arquivos e diretórios usando o comando format com o parâmetro --write:
 
 
+
+## Linting and format code
+
+We use Biome, EditorConfig, and an integrated StyleGuide with automatic formatting. Please download these extensions in your code editor.
+
+1. [Biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome)
+2. [EditorConfig](https://github.com/editorconfig/editorconfig-vscode)
+
+> To ensure that Prettier formats on save, add `"editor.formatOnSave": true` to your VSCode personal settings.
+
+
+### Expanding the Biome configuration
+
+You can change the biome configuration on `biome.json` file on root folder. You can read more about project structure in [Project Structure Section](#project-structure).
+
+### Using Biome Linting
+
+You can format files and directories using the format command with the `--write` parameter:
+
+```bash
 yarn biome format --write <files>
+```
+Or using default script to run format defined on `package.json`:
 
+```bash
+yarn format
+```
 
-Você pode analisar e aplicar correções seguras em arquivos e diretórios utilizando o comando lint com o parâmetro --apply:
+You can analyze and apply safe fixes to files and directories using the lint command with the `--apply` parameter:
 
+```bash
 yarn biome lint --apply <files>
+```
+Or using default script to run lint defined on `package.json`:
 
-Você pode aplicar ambos com o comando check
+```bash
+yarn lint
+```
 
+You can apply both with the check command:
+
+```bash
 yarn biome check --apply <files>
+```
+Or using default script to run check defined on `package.json`:
 
-O comando check executa múltiplas ferramentas de uma vez. Até o momento, ele:
+```bash
+yarn check
+```
+The check command runs multiple tools at once. So far, it:
 
-formata arquivos
-analisa arquivos
-organiza as importações
+Formats files
+Analyzes files
+Organizes imports
